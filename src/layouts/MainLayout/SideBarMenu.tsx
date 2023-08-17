@@ -46,8 +46,8 @@ const listItems: ListItemType[] = [
     icon: <img src={app_images_icon.homeIcon} alt="" width={20} height={20} />,
     subItems: [
       {
-        title: "Test",
-        path: "#",
+        title: "Products",
+        path: PATH.PRODUCT,
         icon: (
           <img src={app_images_icon.homeIcon} alt="" width={18} height={18} />
         ),

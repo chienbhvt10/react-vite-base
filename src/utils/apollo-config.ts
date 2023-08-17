@@ -1,3 +1,4 @@
+import { getSdk } from "../graphql/graphql-gen";
 import { ApiServerGrapqhlURL } from "./config";
 import { GraphQLClient } from "graphql-request";
 
@@ -20,7 +21,7 @@ export class ApolloClientConfig {
 
   getSDK = (auth = true, signal?: AbortSignal) => {
     const client = this.getClient(auth, signal);
-    // return getSdk(client);
+    return getSdk(client);
   };
 }
 const GraphqlClientConfig = new ApolloClientConfig();

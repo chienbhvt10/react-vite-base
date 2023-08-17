@@ -6,7 +6,7 @@ const config: CodegenConfig = {
   schema: ApiServerGrapqhlURL,
   documents: ["src/**/*.graphql"],
   generates: {
-    "./src/grapgql/graphql-gen.ts": {
+    "./src/graphql/graphql-gen.ts": {
       plugins: [
         "typescript",
         "typescript-operations",

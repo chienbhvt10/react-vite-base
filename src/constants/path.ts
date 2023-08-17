@@ -4,4 +4,5 @@ export enum PATH {
   MESSAGE_BOX = "/messages",
   LOGIN = "/auth/login",
   CHANGE_PASSWORD = "/auth/change-password",
+  PRODUCT = "products",
 }
