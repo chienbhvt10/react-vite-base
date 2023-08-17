@@ -1,27 +1,31 @@
 import GraphqlClientConfig from "../utils/apollo-config";
 import { CreateClassInput, UpdateClassInput } from "../graphql/graphql-gen";
 
-export const getAClass = () => {
-  const sdk = GraphqlClientConfig.getSDK(true);
-  return sdk.getAClass({ id: "1" });
-};
+class ClassApi {
+  getAClass = (id: string) => {
+    const sdk = GraphqlClientConfig.getSDK(true);
+    return sdk.getAClass({ id });
+  };
 
-export const getAllClasses = () => {
-  const sdk = GraphqlClientConfig.getSDK(true);
-  return sdk.getAllClasses();
-};
+  getAllClasses = () => {
+    const sdk = GraphqlClientConfig.getSDK(true);
+    return sdk.getAllClasses();
+  };
 
-export const createClass = (input: CreateClassInput) => {
-  const sdk = GraphqlClientConfig.getSDK(true);
-  return sdk.createClass({ input });
-};
+  createClass = (input: CreateClassInput) => {
+    const sdk = GraphqlClientConfig.getSDK(true);
+    return sdk.createClass({ input });
+  };
 
-export const updateClass = (input: UpdateClassInput) => {
-  const sdk = GraphqlClientConfig.getSDK(true);
-  return sdk.updateClass({ input });
-};
+  updateClass = (input: UpdateClassInput) => {
+    const sdk = GraphqlClientConfig.getSDK(true);
+    return sdk.updateClass({ input });
+  };
 
-export const deleteClass = (id: string) => {
-  const sdk = GraphqlClientConfig.getSDK(true);
-  return sdk.deleteClass({ id });
-};
+  deleteClass = (id: string) => {
+    const sdk = GraphqlClientConfig.getSDK(true);
+    return sdk.deleteClass({ id });
+  };
+}
+const CLASS_API = new ClassApi();
+export default CLASS_API;
