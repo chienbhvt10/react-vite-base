@@ -18,7 +18,7 @@ import ExitToAppIcon from "@mui/icons-material/Logout";
 import { useNavigate } from "react-router-dom";
 import { app_images_icon } from "../../../../assets/images";
 import LinkTextCustom from "../../../../components/custom/LinkText";
-import { PATH } from "../../../../constants/path";
+import { PATH } from "@/constants/path";
 
 interface LoginProps {}
 
